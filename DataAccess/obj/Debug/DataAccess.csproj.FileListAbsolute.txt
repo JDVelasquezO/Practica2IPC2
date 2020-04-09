@@ -1,0 +1,9 @@
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\bin\Debug\EntityLayer.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\bin\Debug\EntityLayer.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\DataAccess\obj\Debug\DataAccess.pdb

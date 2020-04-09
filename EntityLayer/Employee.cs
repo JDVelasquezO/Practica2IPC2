@@ -9,7 +9,7 @@ namespace EntityLayer
     public class Employee
     {
         public int id { get; set; }
-        public int cui { get; set; }
+        public long cui { get; set; }
         public string password { get; set; }
         public string first { get; set; }
         public string last { get; set; }

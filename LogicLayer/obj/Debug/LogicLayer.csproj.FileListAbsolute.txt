@@ -4,3 +4,8 @@ C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\obj\Debug\LogicLayer.csp
 C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\obj\Debug\LogicLayer.csproj.CoreCompileInputs.cache
 C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\obj\Debug\LogicLayer.dll
 C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\obj\Debug\LogicLayer.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\bin\Debug\DataAccess.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\bin\Debug\EntityLayer.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\bin\Debug\DataAccess.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\bin\Debug\EntityLayer.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\LogicLayer\obj\Debug\LogicLayer.csproj.CopyComplete

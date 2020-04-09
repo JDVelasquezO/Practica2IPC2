@@ -11,3 +11,7 @@ C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\LogicLayer.dll
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\LogicLayer.pdb
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\DataAccess.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\EntityLayer.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\DataAccess.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\EntityLayer.pdb

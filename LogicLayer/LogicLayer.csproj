@@ -45,5 +45,15 @@
     <Compile Include="Conn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{7262cded-8986-4407-8f09-ecca62c8bfa2}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\Entity.csproj">
+      <Project>{39706bf0-e3b9-4f58-9904-ff4f5d9eaebf}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
