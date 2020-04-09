@@ -8,3 +8,6 @@ C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.exe
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\LogicLayer.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\LogicLayer.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.csproj.CopyComplete
