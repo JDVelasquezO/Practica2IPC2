@@ -1,4 +1,5 @@
-﻿using LogicLayer;
+﻿using EntityLayer;
+using LogicLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace Presentation.Employees
     {
         StoreLogic storeLogic = new StoreLogic();
         DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
+        EmployeeLogic employeeLogic = new EmployeeLogic();
 
         public HomeEmployee()
         {
@@ -59,6 +61,31 @@ namespace Presentation.Employees
         private void cbxStore_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        public void cleanTable(DataGridView dgv)
+        {
+            DataTable dt = new DataTable();
+            dt.Rows.Add(dt.NewRow());
+            dgv.DataSource = dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvEmployees.Rows.Clear();
+
+            int id = Convert.ToInt32(cbxStore.SelectedItem.ToString());
+            List<Employee> employees = employeeLogic.getEmployeesByStore(id);
+
+            foreach (var item in employees)
+            {
+                dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+            }
         }
     }
 }

@@ -98,6 +98,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EntityLayer\Entity.csproj">
+      <Project>{39706BF0-E3B9-4F58-9904-FF4F5D9EAEBF}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
       <Project>{32d57809-b681-46c5-a50c-9bc75e42bb6f}</Project>
       <Name>LogicLayer</Name>

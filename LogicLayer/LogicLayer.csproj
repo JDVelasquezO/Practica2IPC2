@@ -44,6 +44,7 @@
     <Compile Include="Auth.cs" />
     <Compile Include="Conn.cs" />
     <Compile Include="DetailLocationLogic.cs" />
+    <Compile Include="EmployeeLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreLogic.cs" />
   </ItemGroup>
