@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentation.Employees;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,12 @@ namespace Presentation
         {
             this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomeEmployee homeEmployee = new HomeEmployee();
+            homeEmployee.Show();
         }
     }
 }

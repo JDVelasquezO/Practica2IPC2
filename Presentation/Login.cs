@@ -38,7 +38,6 @@ namespace Presentation
             {
                 Home home = new Home();
                 home.Show();
-                this.Close();
             }
         }
     }

@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="AuthDataAccess.cs" />
     <Compile Include="Conn.cs" />
+    <Compile Include="EmployeeDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreDataAccess.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntityLayer\Entity.csproj">
