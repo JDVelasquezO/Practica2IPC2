@@ -51,33 +51,33 @@
             // cbxStore
             // 
             this.cbxStore.FormattingEnabled = true;
-            this.cbxStore.Location = new System.Drawing.Point(12, 85);
+            this.cbxStore.Location = new System.Drawing.Point(22, 85);
             this.cbxStore.Name = "cbxStore";
-            this.cbxStore.Size = new System.Drawing.Size(121, 21);
+            this.cbxStore.Size = new System.Drawing.Size(193, 21);
             this.cbxStore.TabIndex = 3;
             this.cbxStore.SelectedIndexChanged += new System.EventHandler(this.cbxStore_SelectedIndexChanged);
             // 
             // cbxMunicipality
             // 
             this.cbxMunicipality.FormattingEnabled = true;
-            this.cbxMunicipality.Location = new System.Drawing.Point(174, 85);
+            this.cbxMunicipality.Location = new System.Drawing.Point(221, 85);
             this.cbxMunicipality.Name = "cbxMunicipality";
-            this.cbxMunicipality.Size = new System.Drawing.Size(121, 21);
+            this.cbxMunicipality.Size = new System.Drawing.Size(204, 21);
             this.cbxMunicipality.TabIndex = 4;
             this.cbxMunicipality.SelectedIndexChanged += new System.EventHandler(this.cbxMunicipality_SelectedIndexChanged);
             // 
             // cbxDepartament
             // 
             this.cbxDepartament.FormattingEnabled = true;
-            this.cbxDepartament.Location = new System.Drawing.Point(330, 85);
+            this.cbxDepartament.Location = new System.Drawing.Point(431, 85);
             this.cbxDepartament.Name = "cbxDepartament";
-            this.cbxDepartament.Size = new System.Drawing.Size(121, 21);
+            this.cbxDepartament.Size = new System.Drawing.Size(178, 21);
             this.cbxDepartament.TabIndex = 5;
             this.cbxDepartament.SelectedIndexChanged += new System.EventHandler(this.cbxDepartament_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 131);
+            this.button1.Location = new System.Drawing.Point(59, 131);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 46);
             this.button1.TabIndex = 6;
@@ -86,7 +86,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(175, 131);
+            this.button2.Location = new System.Drawing.Point(266, 131);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 46);
             this.button2.TabIndex = 7;
@@ -95,7 +95,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(330, 131);
+            this.button3.Location = new System.Drawing.Point(459, 131);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(120, 46);
             this.button3.TabIndex = 8;
@@ -113,14 +113,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(438, 233);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(597, 233);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // HomeEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 450);
+            this.ClientSize = new System.Drawing.Size(621, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

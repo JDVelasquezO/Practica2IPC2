@@ -15,6 +15,7 @@ namespace Presentation.Employees
     public partial class HomeEmployee : Form
     {
         StoreLogic storeLogic = new StoreLogic();
+        DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
 
         public HomeEmployee()
         {
@@ -27,15 +28,19 @@ namespace Presentation.Employees
             cbxMunicipality.Text = "Escoge una municipio";
             cbxDepartament.Text = "Escoge un departamento";
 
-            fillComboBox(cbxStore);
+            fillCbx(cbxStore, storeLogic.returnIdStore());
+            fillCbx(cbxMunicipality, detailLocationLogic.returnNameMunicipality());
+            fillCbx(cbxDepartament, detailLocationLogic.returnNameDepartament());
+
             this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
         }
 
-        public void fillComboBox(ComboBox cbx)
+        public void fillCbx(ComboBox cbx, List<String> listObjects)
         {
-            List<Int32> listIds = storeLogic.returnIdStore();
-            foreach (var item in listIds)
+            List<String> list = listObjects;
+
+            foreach (var item in listObjects)
             {
                 cbx.Items.Add(item);
             }

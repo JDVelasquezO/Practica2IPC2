@@ -12,14 +12,14 @@ namespace DataAccess
     {
         Conn conn = new Conn();
 
-        public List<Int32> returnIdsStore()
+        public List<String> returnIdsStore()
         {
             conn.open();
-            List<Int32> idsStore = new List<Int32>();
+            List<String> idsStore = new List<String>();
 
             try
             {
-                int id;
+                String id = "";
 
                 SqlCommand cmd;
                 SqlDataReader reader;
@@ -29,7 +29,7 @@ namespace DataAccess
 
                 while (reader.Read())
                 {
-                    id = Convert.ToInt32(reader["id_store"].ToString());
+                    id = reader["id_store"].ToString();
                     idsStore.Add(id);
                 }
                 
@@ -37,7 +37,6 @@ namespace DataAccess
             }
             catch (Exception)
             {
-
                 throw;
             }
 

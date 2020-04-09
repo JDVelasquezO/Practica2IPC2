@@ -11,7 +11,7 @@ namespace LogicLayer
     {
         StoreDataAccess storeData = new StoreDataAccess();
 
-        public List<Int32> returnIdStore()
+        public List<String> returnIdStore()
         {
             return storeData.returnIdsStore();
         }
