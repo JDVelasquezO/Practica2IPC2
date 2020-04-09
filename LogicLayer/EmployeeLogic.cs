@@ -16,5 +16,15 @@ namespace LogicLayer
         {
             return employeeData.getEmployeesByStore(id);
         }
+
+        public List<Employee> getEmployeesByDepartament(String name)
+        {
+            return employeeData.getEmployeesByDepartament(name);
+        }
+
+        public List<Employee> getEmployeesByMunicipality(String name)
+        {
+            return employeeData.getEmployeesByMunicipality(name);
+        }
     }
 }

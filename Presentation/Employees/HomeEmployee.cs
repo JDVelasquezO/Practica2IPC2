@@ -87,5 +87,31 @@ namespace Presentation.Employees
                 dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgvEmployees.Rows.Clear();
+
+            String name = cbxMunicipality.SelectedItem.ToString();
+            List<Employee> employees = employeeLogic.getEmployeesByMunicipality(name);
+
+            foreach (var item in employees)
+            {
+                dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgvEmployees.Rows.Clear();
+
+            String name = cbxDepartament.SelectedItem.ToString();
+            List<Employee> employees = employeeLogic.getEmployeesByDepartament(name);
+
+            foreach (var item in employees)
+            {
+                dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+            }
+        }
     }
 }
