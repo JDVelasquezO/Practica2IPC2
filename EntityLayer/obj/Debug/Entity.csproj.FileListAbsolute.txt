@@ -1,0 +1,6 @@
+C:\Users\JDVelasquezO\source\repos\Practica2\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\EntityLayer\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\JDVelasquezO\source\repos\Practica2\EntityLayer\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\JDVelasquezO\source\repos\Practica2\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\JDVelasquezO\source\repos\Practica2\EntityLayer\obj\Debug\EntityLayer.pdb
