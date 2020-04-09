@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -41,7 +41,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 21);
+            this.label1.Location = new System.Drawing.Point(153, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 28);
             this.label1.TabIndex = 0;
@@ -87,9 +87,10 @@
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(186, 315);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(114, 31);
             this.button1.TabIndex = 6;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,7 +104,7 @@
             this.txtPass.Size = new System.Drawing.Size(210, 20);
             this.txtPass.TabIndex = 5;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +116,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

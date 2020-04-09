@@ -12,18 +12,13 @@ using LogicLayer;
 
 namespace Presentation
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         Auth auth = new Auth();
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
-        }
-
-        public string login()
-        {
-            return auth.login(txtCUI.Text, txtPass.Text);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,12 +28,18 @@ namespace Presentation
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
+            this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(auth.login(txtCUI.Text, txtPass.Text));
+            if(auth.login(txtCUI.Text, txtPass.Text))
+            {
+                Home home = new Home();
+                home.Show();
+                this.Close();
+            }
         }
     }
 }

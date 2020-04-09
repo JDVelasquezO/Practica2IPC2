@@ -15,21 +15,17 @@ namespace LogicLayer
     {
         AuthDataAccess auth = new AuthDataAccess();
 
-        public string login(string cui, string pass)
+        public bool login(string cui, string pass)
         {
             Employee employee = auth.getEmployee(cui);
-            string msg = "";
+            bool marker = false;
             
             if (cui == employee.cui.ToString() && pass == employee.password)
             {
-                msg = "Muy bien";
-            }
-            else
-            {
-                msg = "No hay registros";
+                marker = true;
             }
 
-            return msg;
+            return marker;
         }
     }
 }

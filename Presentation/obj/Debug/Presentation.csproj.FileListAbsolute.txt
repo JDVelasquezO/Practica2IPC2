@@ -2,7 +2,6 @@ C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\Presentation
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\Presentation.exe
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\Presentation.pdb
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
-C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Form1.resources
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
@@ -15,3 +14,5 @@ C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\DataAccess.d
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\EntityLayer.dll
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\DataAccess.pdb
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\EntityLayer.pdb
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Login.resources
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Home.resources
