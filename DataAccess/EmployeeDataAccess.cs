@@ -120,5 +120,49 @@ namespace DataAccess
         {
             return getEmployees(name, "get_employee_municipality", "@nameMunicipality");
         }
+
+        public Employee searchEmployeeById(long cui)
+        {
+            conn.open();
+            Employee employee = new Employee();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("search_employee_by_id", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter id_parameter = new SqlParameter();
+                id_parameter.ParameterName = "@cuiEmployee";
+                id_parameter.SqlDbType = SqlDbType.BigInt;
+                id_parameter.Value = cui;
+
+                cmd.Parameters.Add(id_parameter);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    employee.cui = Convert.ToInt64(reader["CUI"]);
+                    employee.first = reader["Nombre"].ToString();
+                    employee.last = reader["Apellido"].ToString();
+                    employee.phone = reader["Telefono"].ToString();
+                    employee.job = reader["Puesto"].ToString();
+                    employee.init_date = reader["Fecha Inicio"].ToString();
+                    employee.finish_date = reader["Fecha Final"].ToString();
+
+                    if (reader["Fecha Final"].ToString() == "")
+                    {
+                        employee.finish_date = "En vigencia";
+                    }
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return employee;
+        }
     }
 }

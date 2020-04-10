@@ -26,5 +26,10 @@ namespace LogicLayer
         {
             return employeeData.getEmployeesByMunicipality(name);
         }
+
+        public Employee searchEmployeeById(long cui)
+        {
+            return employeeData.searchEmployeeById(cui);
+        }
     }
 }

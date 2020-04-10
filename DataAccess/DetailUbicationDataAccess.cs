@@ -25,7 +25,7 @@ namespace DataAccess
                 SqlCommand cmd;
                 SqlDataReader reader;
 
-                cmd = new SqlCommand("SELECT DISTINCT " + name + " FROM detail_location", conn.returnConn());
+                cmd = new SqlCommand($"SELECT DISTINCT {name} FROM detail_location", conn.returnConn());
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())

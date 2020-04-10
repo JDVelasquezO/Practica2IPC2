@@ -17,3 +17,4 @@ C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\bin\Debug\EntityLayer.
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Login.resources
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Home.resources
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Employees.HomeEmployee.resources
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Employees.EmployeeView.resources

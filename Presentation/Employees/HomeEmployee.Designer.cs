@@ -131,6 +131,7 @@
             this.dgvEmployees.ReadOnly = true;
             this.dgvEmployees.Size = new System.Drawing.Size(743, 194);
             this.dgvEmployees.TabIndex = 9;
+            this.dgvEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellClick);
             this.dgvEmployees.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellContentClick);
             // 
             // colID

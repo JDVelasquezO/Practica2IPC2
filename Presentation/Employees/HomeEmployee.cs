@@ -18,6 +18,7 @@ namespace Presentation.Employees
         StoreLogic storeLogic = new StoreLogic();
         DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
         EmployeeLogic employeeLogic = new EmployeeLogic();
+        public static string id;
 
         public HomeEmployee()
         {
@@ -68,13 +69,6 @@ namespace Presentation.Employees
             
         }
 
-        public void cleanTable(DataGridView dgv)
-        {
-            DataTable dt = new DataTable();
-            dt.Rows.Add(dt.NewRow());
-            dgv.DataSource = dt;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             dgvEmployees.Rows.Clear();
@@ -111,6 +105,16 @@ namespace Presentation.Employees
             foreach (var item in employees)
             {
                 dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+            }
+        }
+
+        private void dgvEmployees_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvEmployees.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                id = dgvEmployees.Rows[e.RowIndex].Cells["colID"].FormattedValue.ToString();
+                EmployeeView employee = new EmployeeView();
+                employee.Show();
             }
         }
     }
