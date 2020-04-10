@@ -78,7 +78,10 @@ namespace Presentation.Employees
 
             foreach (var item in employees)
             {
-                dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+                if (item.status)
+                {
+                    dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+                }
             }
         }
 
@@ -91,7 +94,10 @@ namespace Presentation.Employees
 
             foreach (var item in employees)
             {
-                dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+                if (item.status)
+                {
+                    dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+                }
             }
         }
 
@@ -104,7 +110,10 @@ namespace Presentation.Employees
 
             foreach (var item in employees)
             {
-                dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+                if (item.status)
+                {
+                    dgvEmployees.Rows.Add(item.cui, item.first, item.last, item.phone, item.job, item.init_date, item.finish_date);
+                }
             }
         }
 

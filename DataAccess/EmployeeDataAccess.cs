@@ -43,6 +43,7 @@ namespace DataAccess
                     employee.job = reader["Puesto"].ToString();
                     employee.init_date = reader["Fecha Inicio"].ToString();
                     employee.finish_date = reader["Fecha Final"].ToString();
+                    employee.status = Convert.ToBoolean(reader["Estado"]);
 
                     if (reader["Fecha Final"].ToString() == "")
                     {
@@ -92,6 +93,7 @@ namespace DataAccess
                     employee.job = reader["Puesto"].ToString();
                     employee.init_date = reader["Fecha Inicio"].ToString();
                     employee.finish_date = reader["Fecha Final"].ToString();
+                    employee.status = Convert.ToBoolean(reader["Estado"].ToString());
 
                     if (reader["Fecha Final"].ToString() == "")
                     {
@@ -148,6 +150,7 @@ namespace DataAccess
                     employee.job = reader["Puesto"].ToString();
                     employee.init_date = reader["Fecha Inicio"].ToString();
                     employee.finish_date = reader["Fecha Final"].ToString();
+                    employee.status = Convert.ToBoolean(reader["Estado"]);
 
                     if (reader["Fecha Final"].ToString() == "")
                     {
@@ -163,6 +166,113 @@ namespace DataAccess
             }
 
             return employee;
+        }
+
+        public bool updateEmploye(Employee employee)
+        {
+            conn.open();
+            bool response = false;
+
+            SqlCommand cmd;
+
+            try
+            {
+                cmd = new SqlCommand("update_employee", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter id_parameter = new SqlParameter();
+                id_parameter.ParameterName = "@cui";
+                id_parameter.SqlDbType = SqlDbType.BigInt;
+                id_parameter.Value = employee.cui;
+
+                SqlParameter p_first = new SqlParameter();
+                p_first.ParameterName = "@first";
+                p_first.SqlDbType = SqlDbType.VarChar;
+                p_first.Size = 20;
+                p_first.Value = employee.first;
+
+                SqlParameter p_last = new SqlParameter();
+                p_last.ParameterName = "@last";
+                p_last.SqlDbType = SqlDbType.VarChar;
+                p_last.Size = 20;
+                p_last.Value = employee.last;
+
+                SqlParameter p_phone = new SqlParameter();
+                p_phone.ParameterName = "@phone";
+                p_phone.SqlDbType = SqlDbType.VarChar;
+                p_phone.Size = 10;
+                p_phone.Value = employee.phone;
+
+                SqlParameter p_job = new SqlParameter();
+                p_job.ParameterName = "@job";
+                p_job.SqlDbType = SqlDbType.VarChar;
+                p_job.Size = 20;
+                p_job.Value = employee.job;
+
+                SqlParameter p_initDate = new SqlParameter();
+                p_initDate.ParameterName = "@init_date";
+                p_initDate.SqlDbType = SqlDbType.VarChar;
+                p_initDate.Size = 20;
+                p_initDate.Value = employee.init_date;
+
+                SqlParameter p_finishDate = new SqlParameter();
+                p_finishDate.ParameterName = "@finish_date";
+                p_finishDate.SqlDbType = SqlDbType.VarChar;
+                p_finishDate.Size = 20;
+                p_finishDate.Value = employee.finish_date;
+
+                cmd.Parameters.Add(id_parameter);
+                cmd.Parameters.Add(p_first);
+                cmd.Parameters.Add(p_last);
+                cmd.Parameters.Add(p_phone);
+                cmd.Parameters.Add(p_job);
+                cmd.Parameters.Add(p_initDate);
+                cmd.Parameters.Add(p_finishDate);
+
+                cmd.ExecuteNonQuery();
+
+                response = true;
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+            return response;
+        }
+
+        public bool updateStatus(long cui)
+        {
+            bool response = false;
+            SqlCommand cmd;
+
+            try
+            {
+                conn.open();
+                Employee employee = new Employee();
+                cmd = new SqlCommand("update_status_employee", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter id_parameter = new SqlParameter();
+                id_parameter.ParameterName = "@cui";
+                id_parameter.SqlDbType = SqlDbType.BigInt;
+                id_parameter.Value = cui;
+
+                cmd.Parameters.Add(id_parameter);
+
+                cmd.ExecuteNonQuery();
+
+                response = true;
+
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+            return response;
         }
     }
 }

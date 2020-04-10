@@ -31,5 +31,15 @@ namespace LogicLayer
         {
             return employeeData.searchEmployeeById(cui);
         }
+
+        public bool updateEmploye(Employee employee)
+        {
+            return employeeData.updateEmploye(employee);
+        }
+
+        public bool updateStatus(long cui)
+        {
+            return employeeData.updateStatus(cui);
+        }
     }
 }

@@ -17,5 +17,6 @@ namespace EntityLayer
         public string job { get; set; }
         public string init_date { get; set; }
         public string finish_date { get; set; }
+        public bool status { get; set; }
     }
 }
