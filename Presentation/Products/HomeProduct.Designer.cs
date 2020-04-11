@@ -43,6 +43,7 @@
             this.cbxMunicipality = new System.Windows.Forms.ComboBox();
             this.cbxStore = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             this.colPrice,
             this.colDueDate,
             this.colSize});
-            this.dgvProducts.Location = new System.Drawing.Point(29, 234);
+            this.dgvProducts.Location = new System.Drawing.Point(29, 192);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
             this.dgvProducts.Size = new System.Drawing.Size(743, 194);
@@ -171,11 +172,22 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Productos";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(98, 415);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Agregar Producto";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // HomeProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dgvProducts);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDueDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSize;
+        private System.Windows.Forms.Button button4;
     }
 }

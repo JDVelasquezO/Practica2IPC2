@@ -26,5 +26,10 @@ namespace LogicLayer
         {
             return productData.getProductByMunicipality(name);
         }
+
+        public bool insertProduct(Product product, int idStore)
+        {
+            return productData.insertProduct(product, idStore);
+        }
     }
 }

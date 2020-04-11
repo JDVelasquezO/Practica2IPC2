@@ -85,5 +85,11 @@ namespace Presentation.Products
                 dgvProducts.Rows.Add(item.id_product, item.category, item.quantity, item.mark, item.price, item.due_date, item.size);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AddProducts addClient = new AddProducts();
+            addClient.Show();
+        }
     }
 }
