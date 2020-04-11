@@ -1,4 +1,5 @@
-﻿using LogicLayer;
+﻿using EntityLayer;
+using LogicLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace Presentation.Products
     {
         StoreLogic storeLogic = new StoreLogic();
         DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
+        ProductLogic productLogic = new ProductLogic();
 
         public HomeProduct()
         {
@@ -42,6 +44,45 @@ namespace Presentation.Products
             foreach (var item in listObjects)
             {
                 cbx.Items.Add(item);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvProducts.Rows.Clear();
+
+            int id = Convert.ToInt32(cbxStore.SelectedItem.ToString());
+            List<Product> employees = productLogic.getProductsByStore(id);
+                
+            foreach (var item in employees)
+            {
+                dgvProducts.Rows.Add(item.id_product, item.category, item.quantity, item.mark, item.price, item.due_date, item.size);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgvProducts.Rows.Clear();
+
+            String name = cbxMunicipality.SelectedItem.ToString();
+            List<Product> products = productLogic.getProductByMunicipality(name);
+
+            foreach (var item in products)
+            {
+                dgvProducts.Rows.Add(item.id_product, item.category, item.quantity, item.mark, item.price, item.due_date, item.size);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgvProducts.Rows.Clear();
+
+            String name = cbxDepartament.SelectedItem.ToString();
+            List<Product> products = productLogic.getProductByDepartament(name);
+
+            foreach (var item in products)
+            {
+                dgvProducts.Rows.Add(item.id_product, item.category, item.quantity, item.mark, item.price, item.due_date, item.size);
             }
         }
     }
