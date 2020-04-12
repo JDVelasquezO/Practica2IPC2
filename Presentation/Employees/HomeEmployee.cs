@@ -18,6 +18,8 @@ namespace Presentation.Employees
         StoreLogic storeLogic = new StoreLogic();
         DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
         EmployeeLogic employeeLogic = new EmployeeLogic();
+        DepartamentLogic departamentLogic = new DepartamentLogic();
+        MunicipalityLogic municipalityLogic = new MunicipalityLogic();
         public static string id;
 
         public HomeEmployee()
@@ -32,8 +34,8 @@ namespace Presentation.Employees
             cbxDepartament.Text = "Escoge un departamento";
 
             fillCbx(cbxStore, storeLogic.returnIdStore());
-            fillCbx(cbxMunicipality, detailLocationLogic.returnNameMunicipality());
-            fillCbx(cbxDepartament, detailLocationLogic.returnNameDepartament());
+            fillCbx(cbxMunicipality, municipalityLogic.getListMunicipality());
+            fillCbx(cbxDepartament, departamentLogic.getListDepartaments());
 
             this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;

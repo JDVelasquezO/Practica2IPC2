@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,21 @@ namespace LogicLayer
 {
     public class DetailLocationLogic
     {
-        DetailUbicationDataAccess detailUbication = new DetailUbicationDataAccess();
+        DetailUbicationDataAccess detailUbicationAccess = new DetailUbicationDataAccess();
 
         public List<String> returnNameMunicipality()
         {
-            return detailUbication.returnNameMunicipality();
+            return detailUbicationAccess.returnNameMunicipality();
         }
 
         public List<String> returnNameDepartament()
         {
-            return detailUbication.returnNameDepartament();
+            return detailUbicationAccess.returnNameDepartament();
+        }
+
+        public bool AddDetailUbication(Detail_Ubication detailUbication)
+        {
+            return detailUbicationAccess.AddDetailUbication(detailUbication);
         }
     }
 }

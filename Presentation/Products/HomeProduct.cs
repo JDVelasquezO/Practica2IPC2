@@ -17,6 +17,8 @@ namespace Presentation.Products
         StoreLogic storeLogic = new StoreLogic();
         DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
         ProductLogic productLogic = new ProductLogic();
+        DepartamentLogic departamentLogic = new DepartamentLogic();
+        MunicipalityLogic municipalityLogic = new MunicipalityLogic();
 
         public HomeProduct()
         {
@@ -30,8 +32,8 @@ namespace Presentation.Products
             cbxDepartament.Text = "Escoge un departamento";
 
             fillCbx(cbxStore, storeLogic.returnIdStore());
-            fillCbx(cbxMunicipality, detailLocationLogic.returnNameMunicipality());
-            fillCbx(cbxDepartament, detailLocationLogic.returnNameDepartament());
+            fillCbx(cbxMunicipality, municipalityLogic.getListMunicipality());
+            fillCbx(cbxDepartament, departamentLogic.getListDepartaments());
 
             this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
             this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
@@ -88,8 +90,8 @@ namespace Presentation.Products
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AddProducts addClient = new AddProducts();
-            addClient.Show();
+            AddProducts addProduct = new AddProducts();
+            addProduct.Show();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Presentation.Employees;
 using Presentation.Products;
+//using Presentation.Store;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Presentation
 {
@@ -35,6 +37,17 @@ namespace Presentation
         {
             HomeProduct homeProduct = new HomeProduct();
             homeProduct.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            /*HomeStore homeStore = new HomeStore();
+            homeStore.Show();*/
         }
     }
 }

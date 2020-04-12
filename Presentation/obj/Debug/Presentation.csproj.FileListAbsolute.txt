@@ -20,3 +20,4 @@ C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Employees.EmployeeView.resources
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Products.HomeProduct.resources
 C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Products.AddProducts.resources
+C:\Users\JDVelasquezO\source\repos\Practica2\Presentation\obj\Debug\Presentation.Stores.HomeStore.resources
