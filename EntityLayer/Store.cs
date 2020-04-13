@@ -12,6 +12,6 @@ namespace EntityLayer
         public string phone { get; set; }
         public string type { get; set; }
         public Detail_Ubication detail_ubication = new Detail_Ubication();
-        public Employee employee = new Employee();
+        //public Employee employee = new Employee();
     }
 }

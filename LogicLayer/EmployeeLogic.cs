@@ -41,5 +41,18 @@ namespace LogicLayer
         {
             return employeeData.updateStatus(cui);
         }
+
+        public bool addEmployee(Employee employee)
+        {
+            return employeeData.addEmployee(employee);
+
+        }
+
+        public void searchEmployeeByName(string bossName, Employee employee)
+        {
+            /*Employee bossEmployee = employeeData.searchEmployeeByName(bossName);
+            
+            employeeData.addTypeEmployee(bossEmployee.id, employee.id);*/
+        }
     }
 }

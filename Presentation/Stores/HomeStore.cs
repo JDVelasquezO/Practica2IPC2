@@ -27,8 +27,16 @@ namespace Presentation.Stores
 
         private void button4_Click(object sender, EventArgs e)
         {
+            using (var fd = new FolderBrowserDialog())
+            {
+                if (fd.ShowDialog() == System.Windows.Forms.DialogResult.OK && !string.IsNullOrWhiteSpace(fd.SelectedPath))
+                {
+                    textBox1.Text = fd.SelectedPath;
+                }
+            }
+
             XmlDocument doc = new XmlDocument();
-            String value = "C:\\Users\\JDVelasquezO\\USAC\\Tercer Año\\IPC2\\Practicas\\Practica 2\\archivos\\tiendas.xml";
+            String value = textBox1.Text;
             doc.Load(value);
 
             XmlNodeList xStores = doc.GetElementsByTagName("tiendas");
@@ -118,8 +126,7 @@ namespace Presentation.Stores
             {
                 dgvStore.Rows.Add(item.id_store, item.phone, item.detail_ubication.address, 
                     item.detail_ubication.municipality.name_municipality, 
-                    item.detail_ubication.municipality.departament.name_departament, 
-                    item.employee.first);
+                    item.detail_ubication.municipality.departament.name_departament);
             }
         }
 
@@ -134,8 +141,7 @@ namespace Presentation.Stores
             {
                 dgvStore.Rows.Add(item.id_store, item.phone, item.detail_ubication.address,
                     item.detail_ubication.municipality.name_municipality,
-                    item.detail_ubication.municipality.departament.name_departament,
-                    item.employee.first);
+                    item.detail_ubication.municipality.departament.name_departament);
             }
         }
     }

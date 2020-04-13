@@ -41,6 +41,7 @@
             this.cbxDepartament = new System.Windows.Forms.ComboBox();
             this.cbxMunicipality = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStore)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,11 +155,19 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "Tiendas";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(252, 408);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(249, 20);
+            this.textBox1.TabIndex = 37;
+            // 
             // HomeStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dgvStore);
             this.Controls.Add(this.button3);
@@ -190,5 +199,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colMuni;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDepartament;
         private System.Windows.Forms.DataGridViewTextBoxColumn colEmployee;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

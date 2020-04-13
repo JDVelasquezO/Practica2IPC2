@@ -18,5 +18,7 @@ namespace EntityLayer
         public string init_date { get; set; }
         public string finish_date { get; set; }
         public bool status { get; set; }
+        public string nameBoss { get; set; }
+        public Store store = new Store();
     }
 }

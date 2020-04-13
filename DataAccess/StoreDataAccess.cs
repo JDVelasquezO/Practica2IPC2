@@ -115,7 +115,7 @@ namespace DataAccess
                     store.detail_ubication.address = reader["Direccion"].ToString();
                     store.detail_ubication.municipality.name_municipality = reader["Municipalidad"].ToString();
                     store.detail_ubication.municipality.departament.name_departament = reader["Departamento"].ToString();
-                    store.employee.first = reader["Empleado"].ToString();
+                    //store.employee.first = reader["Empleado"].ToString();
 
                     stores.Add(store);
                 }
@@ -157,7 +157,7 @@ namespace DataAccess
                     store.detail_ubication.address = reader["Direccion"].ToString();
                     store.detail_ubication.municipality.name_municipality = reader["Municipalidad"].ToString();
                     store.detail_ubication.municipality.departament.name_departament = reader["Departamento"].ToString();
-                    store.employee.first = reader["Empleado"].ToString();
+                    //store.employee.first = reader["Empleado"].ToString();
 
                     stores.Add(store);
                 }

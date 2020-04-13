@@ -16,13 +16,13 @@ namespace DataAccess
 
         public Employee getEmployee(string cui)
         {
+            conn.open();
             Employee employee = new Employee();
 
             string query = "SELECT * FROM employee WHERE cui = " + Convert.ToInt64(cui) + "";
             SqlCommand cmd = new SqlCommand(query, conn.returnConn());
             cmd.CommandType = CommandType.Text;
             SqlDataReader reader;
-            conn.open();
 
             try
             {

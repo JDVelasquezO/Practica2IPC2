@@ -43,6 +43,9 @@
             this.colJob = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colInitDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFinishDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +129,7 @@
             this.colJob,
             this.colInitDate,
             this.colFinishDate});
-            this.dgvEmployees.Location = new System.Drawing.Point(12, 244);
+            this.dgvEmployees.Location = new System.Drawing.Point(13, 203);
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.ReadOnly = true;
             this.dgvEmployees.Size = new System.Drawing.Size(743, 194);
@@ -176,11 +179,41 @@
             this.colFinishDate.Name = "colFinishDate";
             this.colFinishDate.ReadOnly = true;
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(81, 415);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(46, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(133, 418);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(204, 20);
+            this.textBox1.TabIndex = 11;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(375, 418);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Cargar";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // HomeEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 450);
+            this.ClientSize = new System.Drawing.Size(768, 450);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.dgvEmployees);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -215,5 +248,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colJob;
         private System.Windows.Forms.DataGridViewTextBoxColumn colInitDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFinishDate;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button5;
     }
 }
