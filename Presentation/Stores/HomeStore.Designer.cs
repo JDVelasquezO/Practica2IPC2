@@ -30,17 +30,17 @@
         {
             this.button4 = new System.Windows.Forms.Button();
             this.dgvStore = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.cbxDepartament = new System.Windows.Forms.ComboBox();
-            this.cbxMunicipality = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMuni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDepartament = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.cbxDepartament = new System.Windows.Forms.ComboBox();
+            this.cbxMunicipality = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStore)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,51 +71,6 @@
             this.dgvStore.ReadOnly = true;
             this.dgvStore.Size = new System.Drawing.Size(769, 194);
             this.dgvStore.TabIndex = 35;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(538, 109);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 46);
-            this.button3.TabIndex = 34;
-            this.button3.Text = "Buscar por departamento";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(155, 109);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 46);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Buscar por municipio";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // cbxDepartament
-            // 
-            this.cbxDepartament.FormattingEnabled = true;
-            this.cbxDepartament.Location = new System.Drawing.Point(520, 63);
-            this.cbxDepartament.Name = "cbxDepartament";
-            this.cbxDepartament.Size = new System.Drawing.Size(188, 21);
-            this.cbxDepartament.TabIndex = 31;
-            // 
-            // cbxMunicipality
-            // 
-            this.cbxMunicipality.FormattingEnabled = true;
-            this.cbxMunicipality.Location = new System.Drawing.Point(115, 63);
-            this.cbxMunicipality.Name = "cbxMunicipality";
-            this.cbxMunicipality.Size = new System.Drawing.Size(204, 21);
-            this.cbxMunicipality.TabIndex = 30;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 28);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Tiendas";
             // 
             // colID
             // 
@@ -152,6 +107,52 @@
             this.colEmployee.HeaderText = "Empleado";
             this.colEmployee.Name = "colEmployee";
             this.colEmployee.ReadOnly = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(538, 109);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 46);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Buscar por departamento";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(155, 109);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 46);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Buscar por municipio";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // cbxDepartament
+            // 
+            this.cbxDepartament.FormattingEnabled = true;
+            this.cbxDepartament.Location = new System.Drawing.Point(520, 63);
+            this.cbxDepartament.Name = "cbxDepartament";
+            this.cbxDepartament.Size = new System.Drawing.Size(188, 21);
+            this.cbxDepartament.TabIndex = 31;
+            // 
+            // cbxMunicipality
+            // 
+            this.cbxMunicipality.FormattingEnabled = true;
+            this.cbxMunicipality.Location = new System.Drawing.Point(115, 63);
+            this.cbxMunicipality.Name = "cbxMunicipality";
+            this.cbxMunicipality.Size = new System.Drawing.Size(204, 21);
+            this.cbxMunicipality.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(70, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 28);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Tiendas";
             // 
             // HomeStore
             // 

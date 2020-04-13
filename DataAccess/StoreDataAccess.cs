@@ -129,5 +129,47 @@ namespace DataAccess
 
             return stores;
         }
+
+        public List<Store> getStoreByDepartament(string nameDepartament)
+        {
+            List<Store> stores = new List<Store>();
+
+            try
+            {
+                conn.open();
+                SqlCommand cmd = new SqlCommand("getStoreByDepartament", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter name = new SqlParameter();
+                name.ParameterName = "@nameDepartament";
+                name.SqlDbType = SqlDbType.VarChar;
+                name.Size = 50;
+                name.Value = nameDepartament;
+
+                cmd.Parameters.Add(name);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Store store = new Store();
+                    store.id_store = Convert.ToInt32(reader["ID Tienda"]);
+                    store.phone = reader["Telefono"].ToString();
+                    store.detail_ubication.address = reader["Direccion"].ToString();
+                    store.detail_ubication.municipality.name_municipality = reader["Municipalidad"].ToString();
+                    store.detail_ubication.municipality.departament.name_departament = reader["Departamento"].ToString();
+                    store.employee.first = reader["Empleado"].ToString();
+
+                    stores.Add(store);
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return stores;
+        }
     }
 }

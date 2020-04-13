@@ -26,5 +26,10 @@ namespace LogicLayer
         {
             return storeData.getStoreByMunicipality(nameMunicipality);
         }
+
+        public List<Store> getStoreByDepartament(string nameDepartament)
+        {
+            return storeData.getStoreByDepartament(nameDepartament);
+        }
     }
 }

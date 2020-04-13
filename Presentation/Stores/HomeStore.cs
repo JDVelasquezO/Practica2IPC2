@@ -122,5 +122,21 @@ namespace Presentation.Stores
                     item.employee.first);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dgvStore.Rows.Clear();
+
+            String name = cbxDepartament.SelectedItem.ToString();
+            List<Store> stores = storeLogic.getStoreByDepartament(name);
+
+            foreach (var item in stores)
+            {
+                dgvStore.Rows.Add(item.id_store, item.phone, item.detail_ubication.address,
+                    item.detail_ubication.municipality.name_municipality,
+                    item.detail_ubication.municipality.departament.name_departament,
+                    item.employee.first);
+            }
+        }
     }
 }
