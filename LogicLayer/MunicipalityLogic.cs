@@ -24,7 +24,19 @@ namespace LogicLayer
 
         public bool AddMunicipality(Municipality municipality)
         {
-            return municipalityData.AddMunicipality(municipality);
+            bool response = false;
+
+            string name = municipalityData.getNameMunicipality(municipality.name_municipality);
+
+            if (name == municipality.name_municipality)
+            {
+                return response;
+            }
+            else
+            {
+                return municipalityData.AddMunicipality(municipality);
+            }
+
         }
     }
 }

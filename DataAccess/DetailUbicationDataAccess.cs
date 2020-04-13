@@ -38,6 +38,8 @@ namespace DataAccess
                     id = Convert.ToInt32(reader["Identificador"]);
                     break;
                 }
+
+                conn.close();
             }
             catch (Exception)
             {

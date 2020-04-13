@@ -80,7 +80,6 @@ namespace Presentation.Stores
 
                 if (storeLogic.AddStores(store))
                 {
-                    MessageBox.Show("Archivo cargado correctamente");
                     this.Close();
                 }
             }

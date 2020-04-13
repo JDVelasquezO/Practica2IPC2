@@ -24,7 +24,18 @@ namespace LogicLayer
 
         public bool AddDepartament(Departament departament)
         {
-            return departamentData.AddDepartament(departament);
+            bool response = false;
+
+            string name = departamentData.getNameDepartament(departament.name_departament);
+
+            if (name == departament.name_departament)
+            {
+                return response;
+            }
+            else
+            {
+                return departamentData.AddDepartament(departament);
+            }
         }
     }
 }

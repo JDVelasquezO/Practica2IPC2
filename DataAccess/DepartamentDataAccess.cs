@@ -69,6 +69,8 @@ namespace DataAccess
                     id = Convert.ToInt32(reader["Identificador"]);
                     break;
                 }
+
+                conn.close();
             }
             catch (Exception)
             {
@@ -76,6 +78,41 @@ namespace DataAccess
             }
 
             return id;
+        }
+
+        public string getNameDepartament(string name)
+        {
+            string nameDep = "";
+
+            try
+            {
+                conn.open();
+                SqlCommand cmd = new SqlCommand("getNameDepartament", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter nameDepartament = new SqlParameter();
+                nameDepartament.ParameterName = "@nameDepartament";
+                nameDepartament.SqlDbType = SqlDbType.VarChar;
+                nameDepartament.Size = 50;
+                nameDepartament.Value = name;
+
+                cmd.Parameters.Add(nameDepartament);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    nameDep = reader["Nombre"].ToString();
+                    break;
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return nameDep;
         }
 
         public bool AddDepartament(Departament departament)

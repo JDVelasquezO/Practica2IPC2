@@ -69,6 +69,8 @@ namespace DataAccess
                     id = Convert.ToInt32(reader["Identificador"]);
                     break;
                 }
+
+                conn.close();
             }
             catch (Exception)
             {
@@ -113,6 +115,41 @@ namespace DataAccess
             }
 
             return response;
+        }
+
+        public string getNameMunicipality(string name)
+        {
+            string nameMun = "";
+
+            try
+            {
+                conn.open();
+                SqlCommand cmd = new SqlCommand("getNameMunicipality", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter nameDepartament = new SqlParameter();
+                nameDepartament.ParameterName = "@nameMunicipality";
+                nameDepartament.SqlDbType = SqlDbType.VarChar;
+                nameDepartament.Size = 50;
+                nameDepartament.Value = name;
+
+                cmd.Parameters.Add(nameDepartament);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    nameMun = reader["Nombre"].ToString();
+                    break;
+                }
+
+                conn.close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return nameMun;
         }
     }
 }
