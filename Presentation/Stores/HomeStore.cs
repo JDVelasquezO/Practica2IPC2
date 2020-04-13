@@ -88,7 +88,40 @@ namespace Presentation.Stores
 
         private void HomeStore_Load(object sender, EventArgs e)
         {
+            cbxMunicipality.Text = "Escoge una municipio";
+            cbxDepartament.Text = "Escoge un departamento";
 
+            fillCbx(cbxMunicipality, municipalityLogic.getListMunicipality());
+            fillCbx(cbxDepartament, departamentLogic.getListDepartaments());
+
+            this.Top = (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2;
+            this.Left = (Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2;
+        }
+
+        public void fillCbx(ComboBox cbx, List<String> listObjects)
+        {
+            List<String> list = listObjects;
+
+            foreach (var item in listObjects)
+            {
+                cbx.Items.Add(item);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dgvStore.Rows.Clear();
+
+            String name = cbxMunicipality.SelectedItem.ToString();
+            List<Store> stores = storeLogic.getStoreByMunicipality(name);
+
+            foreach (var item in stores)
+            {
+                dgvStore.Rows.Add(item.id_store, item.phone, item.detail_ubication.address, 
+                    item.detail_ubication.municipality.name_municipality, 
+                    item.detail_ubication.municipality.departament.name_departament, 
+                    item.employee.first);
+            }
         }
     }
 }

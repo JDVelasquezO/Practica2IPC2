@@ -21,5 +21,10 @@ namespace LogicLayer
         {
             return storeData.AddStores(store);
         }
+
+        public List<Store> getStoreByMunicipality(string nameMunicipality)
+        {
+            return storeData.getStoreByMunicipality(nameMunicipality);
+        }
     }
 }
