@@ -376,7 +376,7 @@ namespace DataAccess
                 p_name.Size = 50;
                 p_name.Value = name;
 
-                cmd.Parameters.Add(name);
+                cmd.Parameters.Add(p_name);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -409,9 +409,9 @@ namespace DataAccess
 
                 SqlParameter p_idBoss = new SqlParameter();
                 p_idBoss.ParameterName = "@fkIdBoss";
-                p_idBoss.SqlDbType = SqlDbType.BigInt;
+                p_idBoss.SqlDbType = SqlDbType.Int;
                 p_idBoss.Value = idBoss;
-
+                
                 SqlParameter p_idEmployee = new SqlParameter();
                 p_idEmployee.ParameterName = "@fkIdEmployee";
                 p_idEmployee.SqlDbType = SqlDbType.Int;
@@ -419,6 +419,35 @@ namespace DataAccess
 
                 cmd.Parameters.Add(p_idBoss);
                 cmd.Parameters.Add(p_idEmployee);
+
+                cmd.ExecuteNonQuery();
+                response = true;
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+            return response;
+        }
+
+        public bool addTypeEmployeeWithoutBoss(int idBoss)
+        {
+            bool response = false;
+
+            try
+            {
+                conn.open();
+                SqlCommand cmd = new SqlCommand("addTypeEmployeeWithoutBoss", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter p_idBoss = new SqlParameter();
+                p_idBoss.ParameterName = "@fkIdBoss";
+                p_idBoss.SqlDbType = SqlDbType.Int;
+                p_idBoss.Value = idBoss;
+                
+                cmd.Parameters.Add(p_idBoss);
 
                 cmd.ExecuteNonQuery();
                 response = true;

@@ -163,7 +163,7 @@ namespace Presentation.Employees
 
         private void button5_Click(object sender, EventArgs e)
         {
-            /*XmlDocument doc = new XmlDocument();
+            XmlDocument doc = new XmlDocument();
             String value = textBox1.Text;
             doc.Load(value);
 
@@ -238,7 +238,8 @@ namespace Presentation.Employees
                 }
                 // Obtener el empleado que coincide con el nombre del jefe que viene en xml
                 employeeLogic.searchEmployeeByName(employee.nameBoss, employee);
-            }*/
+                this.Close();
+            }
         }
     }
 }

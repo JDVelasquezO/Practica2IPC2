@@ -50,9 +50,18 @@ namespace LogicLayer
 
         public void searchEmployeeByName(string bossName, Employee employee)
         {
-            /*Employee bossEmployee = employeeData.searchEmployeeByName(bossName);
-            
-            employeeData.addTypeEmployee(bossEmployee.id, employee.id);*/
+            Employee bossEmployee = employeeData.searchEmployeeByName(bossName);
+            Employee newEmployee = employeeData.searchEmployeeByName(employee.first + " " + employee.last);
+
+            if (bossName == "")
+            {
+                employeeData.addTypeEmployeeWithoutBoss(newEmployee.id);
+            }
+            else
+            {
+                employeeData.addTypeEmployee(bossEmployee.id, newEmployee.id);
+            }
+
         }
     }
 }
