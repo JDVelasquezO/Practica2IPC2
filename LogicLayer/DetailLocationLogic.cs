@@ -12,19 +12,14 @@ namespace LogicLayer
     {
         DetailUbicationDataAccess detailUbicationAccess = new DetailUbicationDataAccess();
 
-        public List<String> returnNameMunicipality()
-        {
-            return detailUbicationAccess.returnNameMunicipality();
-        }
-
-        public List<String> returnNameDepartament()
-        {
-            return detailUbicationAccess.returnNameDepartament();
-        }
-
         public bool AddDetailUbication(Detail_Ubication detailUbication)
         {
             return detailUbicationAccess.AddDetailUbication(detailUbication);
+        }
+
+        public int getIdMunicipality(string name)
+        {
+            return detailUbicationAccess.getIdMunicipality(name);
         }
     }
 }

@@ -30,7 +30,6 @@ namespace DataAccess
                 id_parameter.Value = id;
 
                 cmd.Parameters.Add(id_parameter);
-
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())

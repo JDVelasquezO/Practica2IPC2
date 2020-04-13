@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace LogicLayer
         public List<String> returnIdStore()
         {
             return storeData.returnIdsStore();
+        }
+
+        public bool AddStores(Store store)
+        {
+            return storeData.AddStores(store);
         }
     }
 }

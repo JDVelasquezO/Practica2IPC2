@@ -10,7 +10,6 @@ namespace EntityLayer
     {
         public int id_detail_ubication { get; set; }
         public string address { get; set; }
-        public string municipality { get; set; }
-        public string departament { get; set; }
+        public Municipality municipality = new Municipality();
     }
 }

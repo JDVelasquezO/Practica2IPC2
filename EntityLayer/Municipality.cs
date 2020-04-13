@@ -10,5 +10,6 @@ namespace EntityLayer
     {
         public int id_municipality { get; set; }
         public string name_municipality { get; set; }
+        public Departament departament = new Departament();
     }
 }

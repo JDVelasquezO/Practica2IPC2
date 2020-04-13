@@ -1,4 +1,5 @@
 ﻿using DataAccess;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,16 @@ namespace LogicLayer
         public List<String> getListMunicipality()
         {
             return municipalityData.getListMunicipality();
+        }
+
+        public int getIdMunicipality(string name)
+        {
+            return municipalityData.getIdMunicipality(name);
+        }
+
+        public bool AddMunicipality(Municipality municipality)
+        {
+            return municipalityData.AddMunicipality(municipality);
         }
     }
 }

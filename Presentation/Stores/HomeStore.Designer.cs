@@ -195,6 +195,7 @@
             this.Controls.Add(this.label2);
             this.Name = "HomeStore";
             this.Text = "HomeStore";
+            this.Load += new System.EventHandler(this.HomeStore_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

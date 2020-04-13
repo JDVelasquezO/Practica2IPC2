@@ -2,6 +2,7 @@
 using Presentation;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,69 @@ namespace DataAccess
             }
 
             return list;
+        }
+
+        public int getIdDepartament(string name)
+        {
+            int id = 0;
+
+            try
+            {
+                conn.open();
+                SqlCommand cmd = new SqlCommand("getIdDepartament", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter nameDepartament = new SqlParameter();
+                nameDepartament.ParameterName = "@nameDepartament";
+                nameDepartament.SqlDbType = SqlDbType.VarChar;
+                nameDepartament.Size = 50;
+                nameDepartament.Value = name;
+
+                cmd.Parameters.Add(nameDepartament);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = Convert.ToInt32(reader["Identificador"]);
+                    break;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            return id;
+        }
+
+        public bool AddDepartament(Departament departament)
+        {
+            bool response = false;
+
+            try
+            {
+                conn.open();
+                SqlCommand cmd = new SqlCommand("add_departament", conn.returnConn());
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter p_nameDepartament = new SqlParameter();
+                p_nameDepartament.ParameterName = "@nameDepartament";
+                p_nameDepartament.SqlDbType = SqlDbType.VarChar;
+                p_nameDepartament.Size = 20;
+                p_nameDepartament.Value = departament.name_departament;
+
+                cmd.Parameters.Add(p_nameDepartament);
+
+                cmd.ExecuteNonQuery();
+                response = true;
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+
+            return response;
         }
     }
 }

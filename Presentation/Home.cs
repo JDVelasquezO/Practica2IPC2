@@ -1,6 +1,6 @@
 ﻿using Presentation.Employees;
 using Presentation.Products;
-//using Presentation.Store;
+using Presentation.Stores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,8 +46,8 @@ namespace Presentation
 
         private void button5_Click(object sender, EventArgs e)
         {
-            /*HomeStore homeStore = new HomeStore();
-            homeStore.Show();*/
+            HomeStore homeStore = new HomeStore();
+            homeStore.Show();
         }
     }
 }

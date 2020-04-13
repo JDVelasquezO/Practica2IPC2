@@ -15,7 +15,10 @@ namespace Presentation.Stores
 {
     public partial class HomeStore : Form
     {
+        DepartamentLogic departamentLogic = new DepartamentLogic();
+        MunicipalityLogic municipalityLogic = new MunicipalityLogic();
         DetailLocationLogic detailLocationLogic = new DetailLocationLogic();
+        StoreLogic storeLogic = new StoreLogic();
 
         public HomeStore()
         {
@@ -33,42 +36,59 @@ namespace Presentation.Stores
 
             foreach (var item in stores)
             {
-                Detail_Ubication detail_Ubication = new Detail_Ubication();
+                Departament departament = new Departament();
                 XmlNodeList nameDepartament = ((XmlElement)item).GetElementsByTagName("departamento");
-                XmlNodeList nameMunicipality = ((XmlElement)item).GetElementsByTagName("municipio");
-                XmlNodeList nameAddess = ((XmlElement)item).GetElementsByTagName("ubicacion");
-
                 foreach (XmlElement nodo in nameDepartament)
                 {
-                    detail_Ubication.departament = nodo.InnerText;
+                    departament.name_departament = nodo.InnerText;
                 }
+                departamentLogic.AddDepartament(departament);
 
+                int idDepartament = departamentLogic.getIdDepartament(departament.name_departament);
+                Municipality municipality = new Municipality();
+                XmlNodeList nameMunicipality = ((XmlElement)item).GetElementsByTagName("municipio");
                 foreach (XmlElement nodo in nameMunicipality)
                 {
-                    detail_Ubication.municipality = nodo.InnerText;
+                    municipality.name_municipality = nodo.InnerText;
                 }
+                municipality.departament.id_departament = idDepartament;
+                municipalityLogic.AddMunicipality(municipality);
 
-                foreach (XmlElement nodo in nameAddess)
+                int idMunicipality = municipalityLogic.getIdMunicipality(municipality.name_municipality);
+                Detail_Ubication detail_Ubication = new Detail_Ubication();
+                XmlNodeList nameAddress = ((XmlElement)item).GetElementsByTagName("ubicacion");
+                foreach (XmlElement nodo in nameAddress)
                 {
                     detail_Ubication.address = nodo.InnerText;
                 }
-
+                detail_Ubication.municipality.id_municipality = idMunicipality;
                 detailLocationLogic.AddDetailUbication(detail_Ubication);
 
+                int idAddress = detailLocationLogic.getIdMunicipality(detail_Ubication.address);
                 Store store = new Store();
                 XmlNodeList idsStores = ((XmlElement)item).GetElementsByTagName("id");
                 XmlNodeList phoneStores = ((XmlElement)item).GetElementsByTagName("telefono");
-
                 foreach (XmlElement nodo in idsStores)
                 {
                     store.id_store = Convert.ToInt32(nodo.InnerText);
                 }
-
                 foreach (XmlElement nodo in phoneStores)
                 {
                     store.phone = nodo.InnerText;
                 }
+                store.detail_ubication.id_detail_ubication = idAddress;
+
+                if (storeLogic.AddStores(store))
+                {
+                    MessageBox.Show("Archivo cargado correctamente");
+                    this.Close();
+                }
             }
+        }
+
+        private void HomeStore_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
