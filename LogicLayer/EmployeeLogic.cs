@@ -61,7 +61,6 @@ namespace LogicLayer
             {
                 employeeData.addTypeEmployee(bossEmployee.id, newEmployee.id);
             }
-
         }
     }
 }

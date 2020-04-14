@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Presentation.Products
 {
@@ -90,8 +92,98 @@ namespace Presentation.Products
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AddProducts addProduct = new AddProducts();
-            addProduct.Show();
+            var fileContent = string.Empty;
+            var filePath = string.Empty;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    filePath = openFileDialog.FileName;
+
+                    //Read the contents of the file into a stream
+                    var fileStream = openFileDialog.OpenFile();
+
+                    using (StreamReader reader = new StreamReader(fileStream))
+                    {
+                        fileContent = reader.ReadToEnd();
+                    }
+                }
+            }
+
+            textBox1.Text = filePath;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            XmlDocument doc = new XmlDocument();
+            String value = textBox1.Text;
+            doc.Load(value);
+
+            XmlNodeList xProducts = doc.GetElementsByTagName("productos");
+            XmlNodeList products = ((XmlElement)xProducts[0]).GetElementsByTagName("producto");
+
+            foreach (var item in products)
+            {
+                Product product = new Product();
+                Store_Product store_Product = new Store_Product();
+
+                XmlNodeList ids = ((XmlElement)item).GetElementsByTagName("id");
+                foreach (XmlElement nodo in ids)
+                {
+                    product.id_product = Convert.ToInt32(nodo.InnerText);
+                }
+
+                XmlNodeList categories = ((XmlElement)item).GetElementsByTagName("categoria");
+                foreach (XmlElement nodo in categories)
+                {
+                    product.category = nodo.InnerText;
+                }
+
+                XmlNodeList quantity = ((XmlElement)item).GetElementsByTagName("existencias");
+                foreach (XmlElement nodo in quantity)
+                {
+                    product.quantity = Convert.ToInt32(nodo.InnerText);
+                }
+
+                XmlNodeList mark = ((XmlElement)item).GetElementsByTagName("marca");
+                foreach (XmlElement nodo in mark)
+                {
+                    product.mark = nodo.InnerText;
+                }
+
+                XmlNodeList price = ((XmlElement)item).GetElementsByTagName("precio");
+                foreach (XmlElement nodo in price)
+                {
+                    product.price = nodo.InnerText;
+                }
+
+                XmlNodeList size = ((XmlElement)item).GetElementsByTagName("tamanio");
+                foreach (XmlElement nodo in size)
+                {
+                    product.size = nodo.InnerText;
+                }
+
+                XmlNodeList dueDate = ((XmlElement)item).GetElementsByTagName("vencimiento");
+                foreach (XmlElement nodo in dueDate)
+                {
+                    product.due_date = nodo.InnerText;
+                }
+
+                XmlNodeList idStore = ((XmlElement)item).GetElementsByTagName("tienda");
+                foreach (XmlElement nodo in idStore)
+                {
+                    store_Product.id_store = Convert.ToInt32(nodo.InnerText);
+                }
+
+                productLogic.insertProduct(product, store_Product.id_store);
+            }
         }
     }
 }
